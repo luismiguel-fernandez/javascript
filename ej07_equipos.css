@@ -1,0 +1,13 @@
+#equipo1 {
+	background-color: lightgreen;
+	width: 40%;
+	float: left;
+}
+#equipo2 {
+	background-color: lightblue;
+	width: 40%;
+	float: left;
+}
+.seleccionado {
+	background-color: yellow;
+}

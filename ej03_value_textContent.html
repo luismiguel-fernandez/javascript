@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ej 03 - value VS innerHTML VS textContent</title>
+		<script type="text/javascript">
+		
+		document.addEventListener("DOMContentLoaded",function(){
+			//este código se ejecutará cuando el navegador
+			//haya terminado de procesar el HTML (aunque no
+			//se hayan procesado todavía las imágenes)
+			//Si quieres esperar a que las imágenes también estén
+			//procesadas entonces debes usar en su lugar:
+			// window.onload = function() {...}
+			const boton = document.querySelector("button")
+			boton.addEventListener("click", comprobar)
+		})
+		
+		function comprobar() {
+			const inputEjemplo = document.querySelector("input")
+			const parrafo = document.querySelector("p")
+			const encabezado = document.querySelector("h3")
+			const etiqueta = document.querySelector("label")
+			
+			console.log("value del cuadro de texto es: "+inputEjemplo.value)
+			console.log("innerHTML del cuadro de texto es: "+inputEjemplo.innerHTML)
+			console.log("textContent del cuadro de texto es: "+inputEjemplo.textContent)
+			console.warn("---------------------------------------")
+			console.log("value del p es: "+parrafo.value)
+			console.log("innerHTML del p es: "+parrafo.innerHTML)
+			console.log("textContent del p es: "+parrafo.textContent)
+			console.warn("---------------------------------------")
+			console.log("value del h3 es: "+encabezado.value)
+			console.log("innerHTML del h3 es: "+encabezado.innerHTML)
+			console.log("textContent del h3 es: "+encabezado.textContent)
+			console.warn("---------------------------------------")
+			etiqueta.textContent += "Fin de ejecución de la función COmprpbar"
+			return(0)
+		}
+		</script>
+	</head>
+
+	<body>
+		<input type="text">
+		<p>Prueba de un <strong>párrafo</strong></p>
+		<h3>Esto es un encabezado nivel 3</h3>
+		<label>Texto original</label>
+		<button>Lanzar comprobación</button>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
