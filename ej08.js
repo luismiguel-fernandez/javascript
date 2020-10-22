@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	userInput.addEventListener("keyup",function(e){
 		if (e && e.key == "Enter") {
 			let userTry = userInput.value.trim()
+			console.log(userTry)
 			if (userTry.length && !isNaN(userTry)) {
 				//el texto es un número válido
 				userTry = Math.floor(userTry)
@@ -27,10 +28,14 @@ function insertTry(userTry) {
 		const secretBox = document.querySelector(".secreto")
 		secretBox.classList.replace("secreto","ladrilloDescubierto")
 		secretBox.textContent = secreto 
-		gameLog.textContent += "Has acertado. "
+		gameLog.innerHTML += "Has acertado. "
 	} else {
 		// si falla, sustituimos un gráfico de LADRILLO por el número
-		
+		if (userTry < secreto) {
+			gameLog.innerHTML += "<p>Te has quedado corto.</p>"
+		} else {
+			gameLog.innerHTML += "<p>Te has pasado.</p>"
+		}
 	}
 }
 

@@ -1,43 +1,103 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Ejercicio 08</title>
-		<script type="text/javascript" src="ej08.js"></script>
-		<link rel="stylesheet" href="ej08.css">
-	</head>
-	
-	<body>
-		<noscript>
-			Esta web no funciona correctamente si no tienes habilitados los scripts
-		</noscript>
-	
-		<h1>Ejercicio 08 - Adivinar un número (versión 2.0)</h1>
-		<div id="divIntentos">
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="ladrillo" name="divIntentoIzq"></div>
-			<div class="secreto" name="secreto"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
-			<div class="ladrillo" name="divIntentoDer"></div>
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Ejercicio 08</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script type="text/javascript" src="ej08.js"></script>
+	<link rel="stylesheet" href="ej08.css">
+	<style type="text/css">
+		#titulo {
+			display: flex;
+			align-self: center;
+		}
+	</style>
+</head>
+
+<body>
+	<noscript>
+		Esta web no funciona correctamente si no tienes habilitados los scripts
+	</noscript>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2"><img src="img/logo_mini.png"></div>
+			<div class="col-lg-10" id="titulo">
+				<div class="page-header">
+					<h1>Adivinar un número 2.0 <small>Ejercicio 08 de Javascript</small></h1>
+				</div>
+			</div>
 		</div>
-		<div id="divInput">
-			<label>Escribe tus intentos en esta caja y pulsa INTRO</label>
-			<input type="text" id="userInput" placeholder="escribe un número">
+
+		<div class="row">
+			<div class="col-lg-2"></div>
+			
+			<div class="col-lg-8" id="divIntentos">
+				<table class="table table-striped">
+					<thead class="thead-light"><tr><th>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="ladrillo" name="divIntentoIzq"></div>
+						<div class="secreto" name="secreto"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+						<div class="ladrillo" name="divIntentoDer"></div>
+					</th></tr></thead>
+				</table>
+			</div>
+			
+			<div class="col-lg-2"></div>
 		</div>
-		<label id="log"></label>
-	</body>
+
+		<div class="row">
+		</div>
+		
+		<div class="row">
+		
+			<div class="col-lg-6">
+				<table class="table table-striped">
+					<thead class="thead-light">
+						<tr><th>Escribe tus intentos en esta caja y pulsa INTRO</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>
+							<div class="form-group">
+								<input type="text" class="form-control" id="userInput" placeholder="Números enteros entre 1 y 100">
+							</div>
+						</td></tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="col-lg-6" id="divInput">
+				<table class="table table-striped">
+					<thead class="thead-light">
+						<tr><th>LOG</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>
+							<label id="log"></label>
+						</td></tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+		
+</body>
+
 </html>
-
-
-
-
 
 
 
