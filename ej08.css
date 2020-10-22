@@ -1,0 +1,25 @@
+.ladrillo {
+	width: 50px;
+	height: 50px;
+	background-image: url("img/mariobros_brickblock.png");
+	background-size: 50px 50px;
+	border: solid thin black;
+	float: left;
+}
+.ladrilloDescubierto {
+	width: 50px;
+	height: 50px;
+	background-image: "none";
+	background-color: lightyellow;
+	background-size: 50px 50px;
+	border: solid thin black;
+	float: left;
+}
+.secreto {
+	width: 50px;
+	height: 50px;
+	background-image: url("img/mariobros_questionblock.png");
+	background-size: 50px 50px;
+	border: solid thin black;
+	float: left;	
+}
