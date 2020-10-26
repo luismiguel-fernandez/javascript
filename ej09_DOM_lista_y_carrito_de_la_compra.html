@@ -1,0 +1,94 @@
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<script type="text/javascript" src="ej09.js"></script>
+	<style type="text/css">
+		body {
+			background-color: lightgrey;
+			font-family: 'K2D', sans-serif;
+		}
+		h1 {
+			font-family: 'Indie Flower', cursive;
+			text-align: center;
+		}
+		table, table td {
+			border: solid thin black;
+		}
+		table {
+			background-color: darkseagreen;
+			width: 75%;
+			margin: auto;
+		}
+		td {
+			padding: 5px;
+			width: 50%;
+		}
+		th {
+			background-color: darksalmon;
+		}
+		#tablaInput {
+			width: 50%;
+		}
+		.seleccionado {
+			background-color: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>My first 1M $ app</h1>
+	<table id="tablaInput">
+		<tr>
+			<td><input type="text" id="txtAdd" value=""></td>
+			<td><input type="button" id="btnAdd" value="Add to shopping list"></td>
+		</tr>
+	</table>
+	<br>
+	<table>
+		<tr>
+			<th>My shopping list</th>
+			<th>Actions</th>
+		</tr>
+		<tr>
+			<td>
+				<ul id="mylist">
+				</ul>
+			</td>
+			<td>
+				<input type="button" id="btnSelAll" value="Select all"><br>
+				<input type="button" id="btnSelNot" value="Select nothing"><br>
+				<input type="button" id="btnInvSel" value="Invert selection"><br>
+				<input type="button" id="btnMovSel" value="Move selected to cart"><br>
+				<input type="button" id="btnDelSel" value="Delete selected">
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table>
+		<tr>
+			<th>My cart</th>
+			<th>Actions</th>
+		</tr>
+			<td>
+				<ul id="mycart">
+				</ul>
+			</td>
+			<td>
+				<input type="button" id="btnEmpCar" value="Empty cart"><br>
+			</td>
+		</table>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
