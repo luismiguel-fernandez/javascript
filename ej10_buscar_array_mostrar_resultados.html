@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+		<!-- -->
+		<style type="text/css">
+			#title1 {
+				background-color: lightyellow;
+			}
+			#solution1 {
+				background-color: #ffebb5;
+			}
+			#solution2 {
+				background-color: #facdb1;
+			}
+			div{
+				border: 1px dotted black;
+				padding-top: .2em;
+			}
+			input, button {
+				margin-left: .2em;
+			}
+		</style>
+		<!-- -->
+
+		<title>Mostrar resultados tras buscar en un array</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="title1">
+				<h1>Travel plan app</h1>
+			</div>
+
+			<div class="row">
+				<!-- MITAD IZQUIERDA PARA LA SOLUCION #1 -->
+				<div class="col" id="solution1">
+					<div class="row">
+						<h2>SOLUTION #1</h2>
+					</div>
+					<div class="row">
+						<div class="col">
+						<form class="form-inline">
+						  <div class="form-group">
+							<label for="search1">Search townships</label>
+							<input type="search" id="search1" class="form-control" name="q" placeholder="name of a township" list="listaResult1">
+							<datalist id="listaResult1">
+								<option value="Caravaca"></option>
+								<option value="Cehegín"></option>
+								<option value="Moratalla"></option>
+							</datalist>
+						  </div>
+						  <button type="button" class="btn btn-primary">Add</button>
+						</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-8">
+							<div class="row">
+								<h3>PLACES</h3>
+							</div>
+							<div class="row">
+								<div class="col">
+									<ul class="list-group list-group-flush" id="placeList">
+										<li class="list-group-item">Caravaca</li>
+										<li class="list-group-item">Cehegín</li>
+										<li class="list-group-item">Moratalla</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="row">
+								<h3>ACTIONS</h3>
+							</div>
+							<div class="row">
+								<button type="button" id="btnUp" class="btn btn-secondary">&#8593;</button>
+								<button type="button" id="btnDown" class="btn btn-secondary">&#8595;</button>
+								<button type="button" id="btnRemove" class="btn btn-danger">X</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- MITAD DERECHA PARA LA SOLUCION #2 -->
+				<div class="col" id="solution2">
+					<div class="row">
+						<h2>SOLUTION #2</h2>
+					</div>
+					<div class="row">
+						<div class="col">
+						<form class="form-inline">
+						  <div class="form-group">
+							<label for="search2">Search townships</label>
+							<input type="search" id="search2" class="form-control" name="q" placeholder="name of a township">
+						  </div>
+						  <button type="button" class="btn btn-primary">Add</button>
+						</form>
+						</div>
+					</div>
+
+					<div class="row">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">PLACES</th>
+									<th scope="col">ACTIONS</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Caravaca</td>
+									<td>
+										<div class="row">
+											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
+											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
+											<button type="button" class="btn btn-danger btn-sm">X</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Cehegín</td>
+									<td>
+										<div class="row">
+											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
+											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
+											<button type="button" class="btn btn-danger btn-sm">X</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Moratalla</td>
+									<td>
+										<div class="row">
+											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
+											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
+											<button type="button" class="btn btn-danger btn-sm">X</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Optional JavaScript; choose one of the two! -->
+
+		<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		-->
+
+		<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+		-->
+
+		<script type="text/javascript" src="ej10.js"></script>
+	</body>
+</html>
