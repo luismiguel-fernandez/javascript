@@ -54,6 +54,33 @@ document.addEventListener("DOMContentLoaded",function(){
 		e.target.classList.add("active")
 	})
 
+
+
+	document.querySelector("#btnUp").addEventListener("click", () => {
+		let activo = placeList.querySelector("li.active")
+		if (activo && activo.previousElementSibling) {
+			//mover-colocar el elemento activo como hermano anterior a su actual anterio
+			placeList.insertBefore( activo , activo.previousElementSibling )
+		}
+	})
+
+	document.querySelector("#btnDown").addEventListener("click", () => {
+		let activo = placeList.querySelector("li.active")
+		if (activo && 
+
+	})
+
+	/*
+		padre.appendChild(nodo hijo)
+		padre.append(nodo hijo o varios nodos hijos)
+		padre.prepend(nodo hijo o varios nodos hijos)
+
+		nodo.previousElementSibling
+		
+
+
+	*/
+
 	document.querySelector("#btnRemove").addEventListener("click", () => {
 		let activo = placeList.querySelector("li.active")
 		if (activo)
