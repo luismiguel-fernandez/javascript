@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded",function(){
 	const places = ["Abanilla","Abarán","Águilas","Albudeite","Alcantarilla","Alcázares (Los)","Aledo","Alguazas","Alhama de Murcia","Archena","Beniel","Blanca","Bullas","Calasparra","Campos del Río","Caravaca de la Cruz","Cartagena","Cehegín","Ceutí","Cieza","Fortuna","Fuente Álamo de Murcia","Jumilla","Librilla","Lorca","Lorquí","Mazarrón","Molina de Segura","Moratalla","Mula","Murcia","Ojós","Pliego","Puerto Lumbreras","Ricote","San Javier","San Pedro del Pinatar","Santomera","Torre-Pacheco","Torres de Cotillas (Las)","Totana","Ulea","Unión (La)","Villanueva del Río Segura","Yecla"]
 
-	const search1 = document.querySelector("#search1")
-	const listaResult1 = document.querySelector("#listaResult1")
-	const placeList = document.querySelector("#placeList")
-	const form1 = document.querySelector("#solution1 form")
+	const search2 = document.querySelector("#search2")
+	const listaResult2 = document.querySelector("#listaResult2")
+	const placeTable = document.querySelector("#solution2 table.table")
+	const form2 = document.querySelector("#solution2 form")
 
-	search1.focus()
+	search2.focus()
 
-	form1.addEventListener("submit",function(e){
+	form2.addEventListener("submit",function(e){
 		//impedir que el formulario se envíe al pulsar INTRO o 
 		// clicar en un boton SUBMIT dentro del FORM
 		e.preventDefault()
@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded",function(){
 	places.forEach(function(elemento){
 		let nuevoOption = document.createElement("OPTION")
 		nuevoOption.value = elemento
-		listaResult1.appendChild(nuevoOption)
+		listaResult2.appendChild(nuevoOption)
 	})
 
-	search1.addEventListener("keyup",function(e){
+	search2.addEventListener("keyup",function(e){
 		if (e && e.key == "Enter") {
-			addItemToList(search1.value,placeList)
+			addItemToTable(search2.value,placeTable)
 			//vaciar caja
-			search1.value = ""
+			search2.value = ""
 			//poner de nuevo el foco en la caja
-			search1.focus()
+			search2.focus()
 		}
 	})
 
@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded",function(){
 	//alternativa 1
 	//const button = search1.parentElement.nextElementSibling
 	//alternativa 2
-	const button = document.querySelector("#solution1 form button.btn-primary")
+	const button = document.querySelector("#solution2 form button.btn-primary")
 	button.addEventListener("click",function(){
-		addItemToList(search1.value,placeList)
+		addItemToTable(search2.value,placeTable)
 		//vaciar caja
-        search1.value = ""
+        search2.value = ""
         //poner de nuevo el foco en la caja
-        search1.focus()
+        search2.focus()
 	})
 
 	//DELEGACIÓN DE EVENTOS: que los clics sobre los LI los gestione el propio UL (padre)
@@ -104,15 +104,41 @@ document.addEventListener("DOMContentLoaded",function(){
 
 }) //EVENTO DOMCONTENTLOADED
 
-function addItemToList(item,list){
+function addItemToTable(item,table){
 	if (item.trim().length) {
-        //crear un nuevo LI con el texto de la caja
-        let nuevoLI = document.createElement("LI")
-		nuevoLI.textContent = item.trim()
-		nuevoLI.classList.add("list-group-item")
-        //insertarlo en la lista
-		list.appendChild(nuevoLI)
-		//hacerlo clicable
-		// ---no hacerlo aquí, sino en la propia lista 1 sola vez---
+        //crear un nuevo TR e insertarlo como último hijo del TBODY
+        let nuevoTR = document.createElement("TR")
+        let nuevoTD1 = document.createElement("TD")
+
+        let totalFilasActual = table.querySelectorAll("tbody tr").length      
+        nuevoTD1.textContent = totalFilasActual + 1
+
+        let nuevoTD2 = document.createElement("TD")
+        nuevoTD2.textContent = item
+        let nuevoTD3 = document.createElement("TD")
+        nuevoTD3.innerHTML = '<div class="row"> \
+            <button type="button" class="btn btn-secondary btn-sm">&#8593;</button> \
+            <button type="button" class="btn btn-secondary btn-sm">&#8595;</button> \
+            <button type="button" class="btn btn-danger btn-sm">X</button> \
+            </div>'
+        nuevoTD3.lastElementChild.addEventListener("click", () => {
+            nuevoTR.remove()
+            //equivalentes
+            //this.parentElement.parentElement.remove()
+        })
+
+
+        nuevoTR.append(nuevoTD1,nuevoTD2,nuevoTD3)
+        table.querySelector("tbody").append(nuevoTR)
     }
 }
+
+/*
+    <tr>
+        <td>1</td>
+        <td>Caravaca</td>
+        <td>
+            
+        </td>
+    </tr>
+*/

@@ -75,6 +75,8 @@
 								<h3>ACTIONS</h3>
 							</div>
 							<div class="row">
+								<button type="button" id="btnFirst" class="btn btn-secondary">Top</button>
+								<button type="button" id="btnLast" class="btn btn-secondary">Bottom</button>
 								<button type="button" id="btnUp" class="btn btn-secondary">&#8593;</button>
 								<button type="button" id="btnDown" class="btn btn-secondary">&#8595;</button>
 								<button type="button" id="btnRemove" class="btn btn-danger">X</button>
@@ -93,7 +95,10 @@
 						<form class="form-inline">
 						  <div class="form-group">
 							<label for="search2">Search townships</label>
-							<input type="search" id="search2" class="form-control" name="q" placeholder="name of a township">
+							<input type="search" id="search2" class="form-control" name="q" placeholder="name of a township" list="listaResult2">
+							<datalist id="listaResult2">
+								<!-- poblar con OPTION -->
+							</datalist>
 						  </div>
 						  <button type="button" class="btn btn-primary">Add</button>
 						</form>
@@ -110,39 +115,6 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Caravaca</td>
-									<td>
-										<div class="row">
-											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
-											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
-											<button type="button" class="btn btn-danger btn-sm">X</button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Cehegín</td>
-									<td>
-										<div class="row">
-											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
-											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
-											<button type="button" class="btn btn-danger btn-sm">X</button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Moratalla</td>
-									<td>
-										<div class="row">
-											<button type="button" class="btn btn-secondary btn-sm">&#8593;</button>
-											<button type="button" class="btn btn-secondary btn-sm">&#8595;</button>
-											<button type="button" class="btn btn-danger btn-sm">X</button>
-										</div>
-									</td>
-								</tr>
 							</tbody>
 						</table>
 					</div>
@@ -164,6 +136,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 		-->
 
-		<script type="text/javascript" src="ej10.js"></script>
+		<script type="text/javascript" src="ej10_sol2.js"></script>
 	</body>
 </html>
