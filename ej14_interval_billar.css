@@ -1,0 +1,17 @@
+#tablero {
+	width: 1px;
+	height: 1px;
+	background-color: lightgrey;
+	border-radius: 15px;
+	position: relative;
+}
+
+.bola {
+	width: 1px;
+	height: 1px;
+	background-color: black;
+	border-radius: 15px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}

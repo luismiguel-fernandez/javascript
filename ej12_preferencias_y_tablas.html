@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="ej12_preferencias_y_tablas.js"></script>
+	<style type="text/css">
+		.error {
+			border: thin dotted red;
+		}
+		body {
+			background-color: lightgrey;
+			font-family: 'K2D', sans-serif;
+		}
+		h1 {
+			font-family: 'Indie Flower', cursive;
+			text-align: center;
+		}
+		table, table td {
+			border: solid thin black;
+		}
+		table {
+			background-color: darkseagreen;
+			width: 75%;
+			margin: auto;
+		}
+		td {
+			padding: 5px;
+			width: 50%;
+		}
+		th {
+			background-color: darksalmon;
+		}
+	</style>
+</head>
+
+<body>
+	<select id="empresa1">
+		<option value="nada">(Elige empresa)</option>
+		<option value="goo">Google</option>
+		<option value="fac">Facebook</option>
+		<option value="app">Apple</option>
+		<option value="eve">Everis</option>
+		<option value="twi">Twitter</option>
+		<option value="mic">Microsoft</option>
+	</select>
+	<select id="empresa2" disabled>
+	</select>
+	Nombre <input type="text" id="txtUsuario" placeholder="Escribe tu nombre">
+	<input type="button" id="btnEnviar" value="Enviar">
+	<table id="tablaDatos">
+		<tr>
+			<th>Usuario</th>
+			<th>Prioridad 1</th>
+			<th>Prioridad 2</th>
+			<th>Fecha/Hora</th>
+			<th>Borrar</th>
+		</tr>
+	</table>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
