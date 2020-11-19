@@ -35,20 +35,28 @@ function main() {
         velocidad.textContent = nuevosMilisegundos
     }
 
-    //Inicializar marcador de [tiempo,puntos,velocidad]
-    const tiempo = document.querySelector("#tiempo")
-    tiempo.textContent = tiempoInicial
-    const puntos = document.querySelector("#puntos")
-    puntos.textContent = 0
-    const velocidad = document.querySelector("#velocidad")
-    velocidad.textContent = msIniciales
+    const btnEmpezar = document.querySelector("#btnEmpezar")
+    btnEmpezar.addEventListener("click", () => {
+        //Anulamos la partida anterior, si es que la hay
+        clearInterval(reloj)
+        clearInterval(alarma)
+        bola.removeEventListener("click",clicSobreBola)
 
-    // interval para controlar el tiempo real, los segundos que van pasando
-    reloj = setInterval(actualizaTiempo,1000)
-    // interval que actualiza la bola de posición cada X milisegundos
-    alarma = setInterval(cambiaPosicionBola,msIniciales)
-  
-    bola.addEventListener("click",clicSobreBola)
+        //Inicializar marcador de [tiempo,puntos,velocidad]
+        const tiempo = document.querySelector("#tiempo")
+        tiempo.textContent = tiempoInicial
+        const puntos = document.querySelector("#puntos")
+        puntos.textContent = 0
+        const velocidad = document.querySelector("#velocidad")
+        velocidad.textContent = msIniciales
+
+        // interval para controlar el tiempo real, los segundos que van pasando
+        reloj = setInterval(actualizaTiempo,1000)
+        // interval que actualiza la bola de posición cada X milisegundos
+        alarma = setInterval(cambiaPosicionBola,msIniciales)
+        // evento clic sobre la bola para sumar puntos
+        bola.addEventListener("click",clicSobreBola)
+    })
 }
 
 function cambiaPosicionBola(){
