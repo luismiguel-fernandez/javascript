@@ -19,21 +19,7 @@ function main() {
     tablero.style.height = alturaTablero + "px"
     bola.style.width = anchuraBola + "px"
     bola.style.height = alturaBola + "px"
-
-
-    //Inicializar marcador de [tiempo,puntos,velocidad]
-    const tiempo = document.querySelector("#tiempo")
-    tiempo.textContent = tiempoInicial
-    const puntos = document.querySelector("#puntos")
-    puntos.textContent = 0
-    const velocidad = document.querySelector("#velocidad")
-    velocidad.textContent = msIniciales
-
-    // interval para controlar el tiempo real, los segundos que van pasando
-    reloj = setInterval(actualizaTiempo,1000)
-    // interval que actualiza la bola de posición cada X milisegundos
-    alarma = setInterval(cambiaPosicionBola,msIniciales)
-  
+    
     clicSobreBola = function() {
         //Aumentar la puntuación
         puntos.textContent = Number(puntos.textContent) + 1
@@ -48,6 +34,20 @@ function main() {
         alarma = setInterval(cambiaPosicionBola,nuevosMilisegundos)
         velocidad.textContent = nuevosMilisegundos
     }
+
+    //Inicializar marcador de [tiempo,puntos,velocidad]
+    const tiempo = document.querySelector("#tiempo")
+    tiempo.textContent = tiempoInicial
+    const puntos = document.querySelector("#puntos")
+    puntos.textContent = 0
+    const velocidad = document.querySelector("#velocidad")
+    velocidad.textContent = msIniciales
+
+    // interval para controlar el tiempo real, los segundos que van pasando
+    reloj = setInterval(actualizaTiempo,1000)
+    // interval que actualiza la bola de posición cada X milisegundos
+    alarma = setInterval(cambiaPosicionBola,msIniciales)
+  
     bola.addEventListener("click",clicSobreBola)
 }
 
