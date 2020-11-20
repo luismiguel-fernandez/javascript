@@ -34,16 +34,21 @@ function main() {
     //Definir el movimiento de la bola
     let topBola = Math.floor(Math.random() * (alturaTablero - alturaBola))
     let leftBola = Math.floor(Math.random() * (anchuraTablero - anchuraBola))
-    let velLeftBola = 1
-    let velTopBola = 1
+    let velLeftBola = Math.random() * 2 - 1
+    let velTopBola = Math.random() * 2 - 1
     function moverBola() {
-        bola.style.top = (topBola + velTopBola) + "px"
-        bola.style.left = (leftBola + velLeftBola) + "px"
-        if (topBola >= (alturaTablero-alturaBola))
+        topBola = topBola + velTopBola
+        bola.style.top = topBola + "px"
+
+        leftBola = leftBola + velLeftBola
+        bola.style.left = leftBola + "px"
+
+        if (topBola >= (alturaTablero-alturaBola) || topBola <=0)
             // corregir su dirección vertical
             // cambiar de signo la variable "velVertical"
             velTopBola *= -1
-        if (leftBola >= (anchuraTablero-anchuraBola))
+        
+        if (leftBola >= (anchuraTablero-anchuraBola) || leftBola <=0)
             // corregir su dirección horizontal
             velLeftBola *= -1
         
