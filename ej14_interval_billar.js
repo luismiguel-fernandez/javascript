@@ -36,6 +36,10 @@ function main() {
     let leftBola = Math.floor(Math.random() * (anchuraTablero - anchuraBola))
     let velLeftBola = Math.random() * 2 - 1
     let velTopBola = Math.random() * 2 - 1
+    
+    bola.style.top = topBola + "px"
+    bola.style.left = leftBola + "px"
+
     function moverBola() {
         topBola = topBola + velTopBola
         bola.style.top = topBola + "px"
