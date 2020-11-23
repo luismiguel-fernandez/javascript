@@ -10,14 +10,26 @@
 	<form method="GET" action="ej16_formOK.html">
 		<fieldset>
 		<legend>Datos del conductor</legend>
-		<label>Nombre:</label> <input type="text" id="conductor"><br>
-		<label>DNI:</label> <input type="text" id="dni"><br>
-		<label>Edad:</label> <input type="number" id="edad"><br>
+
+		<label for="conductor">Nombre:</label>
+		<input type="text" id="conductor">
+		<label id="conductorError" ></label><br>
+
+		<label for="dni">DNI:</label>
+		<input type="text" id="dni">
+		<label id="dniError"></label><br>
+
+		<label for="edad">Edad:</label>
+		<input type="number" id="edad">
+		<label id="edadError"></label><br>
+
 		<label>Carné en vigor:</label> <input type="checkbox" id="carne"><br>
+		
 		<label>Tipo de carné</label><br>
 		<input name="tc" type="radio" value="a">Tipo A<br>
 		<input name="tc" type="radio" value="b">Tipo B<br>
 		<input name="tc" type="radio" value="c">Tipo C<br>
+		<label id="tipoCarneError"></label>
 		</fieldset>
 
 		<fieldset>
@@ -27,6 +39,7 @@
 			<option value="vel">Velocidad</option>
 			<option value="sen">Señales</option>
 		</select>
+		<label id="tipoInfraccionError"></label>
 		</fieldset>	
 		<input type="submit" value="Enviar">
 	</form>
