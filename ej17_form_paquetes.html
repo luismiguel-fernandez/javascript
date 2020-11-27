@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>GESTIÓN DE ENVÍO DE PEDIDOS</title>
+		<link rel="stylesheet" type="text/css" href="ej17_form_paquetes.css">
+	</head>
+	<body>
+		<div id="for">
+		<h1>Gestión de envío de pedidos</h1>
+		<form id="formEnvios" action="" method="POST">
+			<fieldset>
+			<legend><b>Datos del envío</b></legend>
+			<table>
+				<tr>
+					<td>Número de referencia del pedido</td>
+					<td><input id="refPedido" class="campoCorrecto" type="text" placeholder="Número de referencia del pedido *" size="40"></td>
+					<td><label id="refPedidoError"></label></td>
+				</tr>
+				<tr>
+					<td>Peso en kilogramos</td>
+					<td><input id="peso" class="campoCorrecto" type="text" placeholder="Peso en KG *" size="20"></td>
+					<td><label id="pesoError"></label></td>
+				</tr>
+			</table>
+			</fieldset>
+			<br>
+
+			<fieldset>
+			<legend><b>Acciones</b></legend>
+			<input type="submit" id="enviar" value="Envío del formulario">
+			<input type="reset" id="reset" value="Borrar">
+			<input type="button" id="anyadir" value="Añadir a la tabla">
+			<br>
+			<table id="tablaEnvios">
+				<thead>
+				<tr>
+					<td><b>Referencias</b></td>
+					<td><b>Pesos</b></td>
+					<td><b>Opciones</b></td>
+				</tr>
+				</thead>
+				
+				<tbody>
+				</tbody>
+				
+				<tfoot>
+				<tr>
+					<td><input type="text" id="totalEnvios" disabled></td>
+					<td><input type="text" id="totalPeso" disabled></td>
+					<td>Totales de número de envíos y suma de pesos</td>
+				</tr>
+				</tfoot>
+			</table>
+			</fieldset>
+		</form>
+		</div>
+	</body>
+	<script type="text/javascript" src="ej17_form_paquetes.js"></script>
+</html>

@@ -1,0 +1,33 @@
+body {
+	background-color: #CCCCCC;
+	font-family: arial;
+}
+label {
+	color: red;
+}
+.campoCorrecto {
+	background-color: #FFFFFF;
+}
+
+.campoIncorrecto {
+	background-color: #FFBBBB;
+	border: 2px solid red;
+}
+
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+.pendiente {
+	font-family: Times;
+	font-style: italic;
+	color: #FF7766;
+}
+#tablaEnvios td {
+	border: thin solid black;
+	padding: 5px;
+}
