@@ -1,0 +1,48 @@
+body {
+	background-color: #CCCCCC;
+	font-family: arial;
+}
+label {
+	font-style: italic;
+	color: red;
+}
+
+.campoCorrecto {
+	background-color: #FFFFFF;
+}
+.campoIncorrecto {
+	background-color: #FFBBBB;
+	border: 2px solid red;
+}
+
+.invisible {
+	display: none;
+}
+.visible {
+	display: block;
+}
+
+#enviar {
+	font-size: 18px;
+	color: green;
+}
+#borrar {
+	font-size: 18px;
+	color: red;
+}
+#anyadir {
+	font-size: 18px;
+	color: blue;
+}
+
+#tablaMovs td, #tablaMovs th {
+	border: thin solid black;
+	padding: 4px;
+}
+#tablaMovs thead tr {
+	background-color: white;
+}
+#tablaMovs tfoot tr {
+	font-style: italic;
+	background-color: lightblue;
+}

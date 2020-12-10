@@ -1,0 +1,24 @@
+body {
+	background-color: #CCCCCC;
+	font-family: arial;
+}
+label {
+	font-style: italic;
+	color: red;
+}
+
+#empezar {
+	font-size: 18px;
+	color: green;
+}
+#parar {
+	font-size: 18px;
+	color: red;
+}
+#segundos td {
+	border: thin solid black;
+	padding: 5px;
+}
+.coloreado {
+	background-color: black;
+}

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>MOVIMIENTOS EN CUENTA BANCARIA</title>
+		<link rel="stylesheet" type="text/css" href="ej1.css">
+	</head>
+	<body>
+		<div id="main">
+		<h1>Movimientos en cuenta bancaria</h1>
+		<form id="formMovimientos" action="" method="POST">
+			<fieldset>
+				<legend><b>Datos del movimiento</b></legend>
+				<table>
+					<tr>
+						<td>Concepto</td>
+						<td><input type="text" id="concepto" class="campoCorrecto" placeholder="Concepto *" size="30"></input></td>
+						<td><label id="conceptoError"></label></td>
+					</tr>
+					<tr>
+						<td>Cantidad</td>
+						<td><input type="text" id="cantidad" class="campoCorrecto" placeholder="Cantidad en € *" size="12"></input> €</td>
+						<td><label id="cantidadError"></label></td>
+					</tr>
+					<tr>
+						<td>Tipo</td>
+						<td>
+							<select id="tipo" class="campoCorrecto" size="2">
+								<option value="p">Pago</option>
+								<option value="a">Ingreso</option>
+							</select>
+						</td>
+						<td><label id="tipoError"></label></td>
+					</tr>
+				</table>
+			</fieldset>
+			</br>
+
+			<fieldset>
+				<legend><b>Envío del formulario</b></legend>
+				<input type="submit" id="enviar" value="Enviar"></input>
+				<input type="reset" id="borrar" value="Borrar"></input>
+			</fieldset>
+		</form>
+
+		</br>
+		<fieldset>
+			<legend><b>Registro en tabla</b></legend>
+			<input type="button" id="anyadir" value="Añadir a la tabla"></input>
+				<br></br>
+				<table id="tablaMovs">
+					<thead>
+					<tr>
+						<th>Concepto</th>
+						<th>Cantidad</th>
+						<th>Tipo</th>
+						<th>Seleccionar/Borrar</th>
+					</tr>
+					</thead>
+					
+					<tbody>
+					</tbody>
+					
+					<tfoot>
+					<tr>
+						<td colspan="2">Nº movimientos: <input type="text" id="numMovs" disabled></input></td>
+						<td colspan="2">Saldo resultante: <input type="text" id="saldo" disabled></input></td>
+					</tr>
+					</tfoot>
+				</table>
+		</fieldset>
+		</div>
+	</body>
+	<script type="text/javascript" src="ej1_luismi.js"></script>
+</html>
