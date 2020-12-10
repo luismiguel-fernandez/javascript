@@ -80,6 +80,7 @@ function campoDniOK() {
     // que empieze por 8 dígitos decimales y acaba en una letra
     // y opcionalmente podríamos aceptar guión medio
     const patronDni = /^\d{8}[a-zA-Z]$/
+
     //comprobación con función "test"
     if (patronDni.test(dni)) {
         //el dni que ha escrito el usuario cumple el patrón
