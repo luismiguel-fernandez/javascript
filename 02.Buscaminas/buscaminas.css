@@ -1,0 +1,24 @@
+#tablero {
+    width: 352px;
+}
+
+.celda {
+    width: 30px;
+    height: 30px;
+    border: thin solid black;
+    float: left;
+    background-image: url("img/celda.png")
+}
+
+.celda_clicada {
+    background-image: url("img/celda_clicada.png")
+}
+
+/*.celda[data-mina="true"] {
+    background-color: red;
+}*/
+
+.mina_explotada {
+    background-image: url("img/mina_explotada.png");
+    background-size: contain;
+}
