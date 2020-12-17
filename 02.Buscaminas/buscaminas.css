@@ -18,6 +18,11 @@
     background-color: red;
 }*/
 
+.mina {
+    background-image: url("img/mina.png");
+    background-size: contain;
+}
+
 .mina_explotada {
     background-image: url("img/mina_explotada.png");
     background-size: contain;
