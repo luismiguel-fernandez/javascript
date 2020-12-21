@@ -10,13 +10,37 @@
     background-image: url("img/celda.png")
 }
 
-.celda_clicada {
-    background-image: url("img/celda_clicada.png")
+.celda_clicada0 {
+    background-image: url("img/celda_clicada.png");
+    background-size: contain;
+}
+.celda_clicada1 {
+    background-image: url("img/1.png");
+    background-size: contain;
+}
+.celda_clicada2 {
+    background-image: url("img/2.png");
+    background-size: contain;
+}
+.celda_clicada3 {
+    background-image: url("img/3.png");
+    background-size: contain;
+}
+.celda_clicada4 {
+    background-image: url("img/4.png");
+    background-size: contain;
 }
 
-/*.celda[data-mina="true"] {
-    background-color: red;
-}*/
+
+
+.celda_bandera {
+    background-image: url("img/bandera.png");
+    background-size: contain;
+}
+
+.celda[data-mina="true"] {
+    background-image: url("img/mina_explotada.png");
+}
 
 .mina {
     background-image: url("img/mina.png");
@@ -26,4 +50,8 @@
 .mina_explotada {
     background-image: url("img/mina_explotada.png");
     background-size: contain;
+}
+
+#records table, #records th, #records td {
+    border: thin solid black; 
 }
