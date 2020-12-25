@@ -1,0 +1,114 @@
+<HTML>
+
+<head>
+    <title>GPU Shop</title>
+    <meta charset="utf-8">
+    <!-- <script defer type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
+    <script defer type="text/javascript" src="js/ej1.js"></script>
+    <!-- <script defer type="text/javascript" src="js/ej1_byLM.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: grey;
+            font-family: "Fjalla One", sans-serif;
+        }
+
+        div {
+            border: solid darkgreen;
+            border-radius: 8%;
+            padding: 10px;
+        }
+
+        #divBuscador {
+            width: 550px;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        #divBuscador h1 {
+            color: lightgrey;
+            text-align: center;
+        }
+
+        #buscador {
+            background-color: darkseagreen;
+            width: 350px;
+            margin-left: 100px;
+            font-size: 18px;
+        }
+
+        #divSeleccionados,
+        #divResultados {
+            width: 550px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #tableSeleccionados,
+        #tableResultados {
+            margin: auto;
+            width: 550px;
+        }
+
+        #tableSeleccionados th,
+        #tableResultados th {
+            background-color: lightgrey;
+            border: thin solid black;
+        }
+
+        #tableSeleccionados td,
+        #tableResultados td {
+            width: auto;
+            border: thin solid black;
+            text-align: center;
+        }
+
+        #tableSeleccionados tfoot {
+            background-color: darkseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divBuscador">
+        <h1>Buscador de tarjetas gráficas</h1>
+        <input type="text" id="buscador"></input>
+    </div>
+    <div id="divResultados">
+        <table id="tableResultados">
+            <thead>
+                <tr>
+                    <th style="width:65%">Producto</th>
+                    <th style="width:20%">Precio</th>
+                    <th style="width:15%">Añadir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- RELLENADO MEDIANTE SCRIPT -->
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+    <div id="divSeleccionados">
+        <table id="tableSeleccionados">
+            <thead>
+                <tr>
+                    <th colspan="2">Lista de tarjetas añadidas</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- RELLENADO MEDIANTE SCRIPT -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>0 artículos</td>
+                    <td>0 €</td>
+                    <td><input id="inputBorrarTodos" type="button" value="Vaciar lista"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</HTML>
