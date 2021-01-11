@@ -1,6 +1,5 @@
 <?php
 if(isset($_GET['ultimo'])) {
-   
     $server = "mysql:dbname=chat";
     $user = "root";
     $pass = "";
