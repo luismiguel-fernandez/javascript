@@ -1,0 +1,85 @@
+<HTML>
+
+<head>
+    <title>FilmAffinity 2.0</title>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: grey;
+            font-family: "Fjalla One", sans-serif;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+        
+        #divBuscador h1 {
+            color: lightblue;
+        }
+        
+        #divBuscador {
+            width: 450px;
+            margin: auto;
+            margin-top: 5%;
+        }
+        
+        #buscador {
+            background-color: darkseagreen;
+            width: 350px;
+            font-size: 18px;
+        }
+        
+        #divSugerencias {
+            display: none;
+            width: 95%;
+            border: thin solid black;
+            margin: auto;
+            background-color: white;
+        }
+		
+		#divResultados {
+            width: 750px;
+            margin: auto;
+			margin-top: 100px;
+		}
+		
+		.menu {
+			border: thin dotted black;
+			background-color: lightblue;
+		}
+       
+		.listaResultados {
+			border: thin dotted black;
+			margin-left: 30px;
+			padding-left: 10px;
+            background-color: darkseagreen;
+		}
+       
+        .selected {
+            background-color: lightblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="divBuscador">
+        <h1>Buscador de películas</h1>
+        <input type="text" id="buscador"></input>
+        <div id="divSugerencias"></div>
+    </div>
+	<div id="divResultados">
+		<h3 class="menu">Películas</h3>
+		<ul class="listaResultados"></ul>
+		<h3 class="menu">Directores</h3>
+		<ul class="listaResultados"></ul>
+		<h3 class="menu">Actores</h3>
+		<ul class="listaResultados"></ul>
+	</div>
+</body>
+<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="filmaffinity.js"></script>
+
+</HTML>
