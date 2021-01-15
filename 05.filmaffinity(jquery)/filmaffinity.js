@@ -7,31 +7,15 @@
 	//Escribe aquí todo tu código
 	console.log("Empieza la ejecución");
 	$(document).ready(main);
-	//Capturar el clic de las sugerencias (delegación de eventos)
+
+	//Capturar el clic de las sugerencias "<P>" (delegación de eventos)
 	$("#divSugerencias").on("click","p",function(){
-		$(this).toggleClass("selected")
-		//console.log( $(this).html() )
-		$.ajax({
-			url: "search.php",
-			method: "GET",
-			data: {
-				id: $(this).data("id"),
-				t: $(this).data("tipo")
-			},
-			success: function(xml){
-				//procesar el XML y colocar cada tipo de dato en su DIV correspondiente
-				
-			},
-			error: function(error) {
-				alert("error en la llamada AJAX")
-			}
-		}) //AJAX
+		consultarPorID($(this).data("id"),$(this).data("tipo"))
 	})
-
-
-
-
-
+	//Capturar el clic de los resultados "<LI>" de cada una de las 3 listas (delegación de eventos)
+	$("#divResultados").on("click","li",function(){
+		consultarPorID($(this).data("id"),$(this).data("tipo"))
+	})
 
 function main() {
 	$("#buscador").keyup(function(ev){
@@ -73,6 +57,65 @@ function main() {
 
 	})
 	
+} //function MAIN
+
+function consultarPorID(id,tipo) {
+	$.ajax({
+		url: "search.php",
+		method: "GET",
+		data: {
+			id: id,
+			t: tipo
+		},
+		success: function(respuestaXML){
+			//procesar el XML y colocar cada tipo de dato en su DIV correspondiente
+			let $xml = $(respuestaXML)
+			let $resultados = $xml.find("resultado")
+
+			//localizar las 3 listas (películas = 0, directores = 1, actores = 2)
+			let $ulPeliculas = $(".listaResultados").eq(0).empty()
+			let $ulDirectores = $(".listaResultados").eq(1).empty()
+			let $ulActores = $(".listaResultados").eq(2).empty()
+
+			let x:String = "hola"
+			x = 2
+
+			$resultados.each(function(){
+				let tipo = $(this).find("tipo").html()
+				switch (tipo) {
+					case "0":
+						//Es una película
+						$("<LI>")
+							.html( $(this).find("titulo").html() )
+							.data("id", $(this).find("id").html() )
+							.data("tipo", "tit")
+							.appendTo($ulPeliculas)
+						break;
+					case "1":
+						//Es un director o directora
+						$("<LI>")
+							.html( $(this).find("nombre").html() )
+							.data("id", $(this).find("id").html() )
+							.data("tipo", "dir")
+							.appendTo($ulDirectores)
+						break;
+					case "2":
+						//Es un actor o actriz
+						$("<LI>")
+							.html( $(this).find("nombre").html() )
+							.data("id", $(this).find("id").html() )
+							.data("tipo", "act")
+							.appendTo($ulActores)
+						break;
+					
+				} // SWITCH
+			}) // EACH
+		},
+		error: function(error) {
+			alert("error en la llamada AJAX")
+		}
+	}) //AJAX
 }
+
 
 })();
