@@ -1,4 +1,11 @@
-[
-  {"title":"angular para novatos", "id": "0001"},
-  {"title":"angular intermedio", "id": "0002"}
-]
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
