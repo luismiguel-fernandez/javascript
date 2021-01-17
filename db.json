@@ -1,11 +1,16 @@
 {
-  "posts": [
+  "talks": [
     {
       "id": 1,
-      "title": "hello"
+      "title": "Angular para novatos"
+    },
+    {
+      "id": 2,
+      "title": "Angular para espabilados"
+    },
+    {
+      "id": 3,
+      "title": "Angular para sobrados"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
