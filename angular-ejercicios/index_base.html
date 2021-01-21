@@ -22,7 +22,7 @@
 		<div ng-repeat="product in sc.products" class="product row">
 			<h3>
 				{{product.name}}
-				<em class="pull-right">{{product.price}}</em>
+				<em class="pull-right">{{product.price | currency:"pesetas"}} €</em>
 			</h3>
 			<div ng-controller="GalleryController as gc">
 				<img ng-src="{{product.images[gc.current]}}" />
@@ -36,33 +36,36 @@
 				</ul>
 			</div>
 			<button>Add to Cart</button>
-			<div>
+			<div ng-controller="TabsController as tc">
 				<ul class="nav nav-pills">
-					<li>
+					<li ng-click="tc.setCurrentTab(0)"
+						ng-class="{ active : tc.isTab(0) }">
 						<a href="#" data-toggle="tab">Description</a>
 					</li>
-					<li>
+					<li ng-click="tc.setCurrentTab(1)"
+						ng-class="{ active : tc.isTab(1) }">
 						<a href="#" data-toggle="tab">Specifications</a>
 					</li>
-					<li>
+					<li ng-click="tc.setCurrentTab(2)"
+						ng-class="{ active : tc.isTab(2) }">
 						<a href="#" data-toggle="tab">Reviews</a>
 					</li>
 				</ul>
-				<div>
-				<h3>Description</h3>
-				Esta es la descripcion
+				<div ng-show="tc.isTab(0)">
+					<h3>Description</h3>
+					Esta es la descripcion
 				</div>
-				<div>
-				<h3>Specifications</h3>
-				Shine: Brillo del producto
+				<div ng-show="tc.isTab(1)">
+					<h3>Specifications</h3>
+					Shine: Brillo del producto
 				</div>
-				<div>
+				<div ng-show="tc.isTab(2)">
 					<h3>Reviews</h3>
-					<div>
-						<blockquote>
-						<p><strong>Autor in fecha</strong></p>
-						<span>N? estrellas stars</span>
-						<cite><p>Texto de la review</p><cite>
+					<div ng-controller="ReviewsController as rc">
+						<blockquote ng-repeat="review in product.reviews">
+						<p><strong>{{review.author}} in {{review.createdOn | date:'dd/MM/yyyy HH:mm'}}</strong></p>
+						<span>{{review.stars}} stars</span>
+						<cite><p>{{review.body}}</p><cite>
 						</blockquote>
 					</div>
 					<form novalidate>

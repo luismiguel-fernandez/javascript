@@ -16,6 +16,20 @@
     }
   })
 
+  app.controller('TabsController',function(){
+    this.currentTab = 0
+    this.setCurrentTab = function(newTab) {
+      this.currentTab = newTab
+    }
+    this.isTab = function(aTab) {
+      return (this.currentTab == aTab)
+    }
+  })
+
+  app.controller('ReviewsController',function(){
+    
+  })
+
 
   var gems = [{
       name: 'Azurite',
