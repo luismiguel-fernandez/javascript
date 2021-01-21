@@ -1,0 +1,16 @@
+{
+  "talks": [
+    {
+      "id": 1,
+      "title": "Angular para novatos"
+    },
+    {
+      "id": 2,
+      "title": "Angular para espabilados"
+    },
+    {
+      "id": 3,
+      "title": "Angular para sobrados"
+    }
+  ]
+}
