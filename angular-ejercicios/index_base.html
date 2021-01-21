@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="gemstore">
+	<head>
+		<title>Gemstore</title>
+		<meta charset="utf-8">
+		 <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		<style type="text/css">
+		.thumbnail img {
+			width: 50px;
+			height: 50px;
+		}
+		</style>
+	</head>
+	
+	<body ng-controller="StoreController as sc">
+	<div class="container">
+		<div ng-repeat="product in sc.products" class="product row">
+			<h3>
+				{{product.name}}
+				<em class="pull-right">{{product.price}}</em>
+			</h3>
+			<div ng-controller="GalleryController as gc">
+				<img ng-src="{{product.images[gc.current]}}" />
+				<ul class="clearfix">
+					<li class="small-image pull-left thumbnail"
+						ng-repeat="img in product.images"
+						ng-click="gc.setCurrent($index)"
+						>
+						<img ng-src="{{img}}">
+					</li>
+				</ul>
+			</div>
+			<button>Add to Cart</button>
+			<div>
+				<ul class="nav nav-pills">
+					<li>
+						<a href="#" data-toggle="tab">Description</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="tab">Specifications</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="tab">Reviews</a>
+					</li>
+				</ul>
+				<div>
+				<h3>Description</h3>
+				Esta es la descripcion
+				</div>
+				<div>
+				<h3>Specifications</h3>
+				Shine: Brillo del producto
+				</div>
+				<div>
+					<h3>Reviews</h3>
+					<div>
+						<blockquote>
+						<p><strong>Autor in fecha</strong></p>
+						<span>N? estrellas stars</span>
+						<cite><p>Texto de la review</p><cite>
+						</blockquote>
+					</div>
+					<form novalidate>
+						<blockquote>
+						<p><strong>Autor in fecha</strong></p>
+						<span>N? estrellas stars</span>
+						<cite><p>Texto de la review</p><cite>
+						</blockquote>
+						<fieldset class="form-group">
+							<select class="form-control">
+								<option value="">Rate the Product</option>
+							</select>
+						</fieldset>
+						<fieldset class="form-group">
+							<textarea class="form-control" placeholder="write an opinion"></textarea>
+						</fieldset>
+						<fieldset class="form-group">
+							<input class="form-control" type="email" placeholder="write a valid email"></input>
+						</fieldset>
+						<fieldset class="form-group">
+							<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+	
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
