@@ -22,7 +22,7 @@
 		<div ng-repeat="product in sc.products" class="product row">
 			<h3>
 				{{product.name}}
-				<em class="pull-right">{{product.price | currency:"pesetas"}} €</em>
+				<em class="pull-right">{{product.price | currency:""}} €</em>
 			</h3>
 			<div ng-controller="GalleryController as gc">
 				<img ng-src="{{product.images[gc.current]}}" />
@@ -59,31 +59,40 @@
 					<h3>Specifications</h3>
 					Shine: Brillo del producto
 				</div>
-				<div ng-show="tc.isTab(2)">
+				<div ng-show="tc.isTab(2)"
+					ng-controller="ReviewsController as rc">
 					<h3>Reviews</h3>
-					<div ng-controller="ReviewsController as rc">
+					<div>
 						<blockquote ng-repeat="review in product.reviews">
 						<p><strong>{{review.author}} in {{review.createdOn | date:'dd/MM/yyyy HH:mm'}}</strong></p>
 						<span>{{review.stars}} stars</span>
 						<cite><p>{{review.body}}</p><cite>
 						</blockquote>
 					</div>
-					<form novalidate>
+					<form novalidate
+						ng-submit="rc.addReview(product)">
 						<blockquote>
-						<p><strong>Autor in fecha</strong></p>
-						<span>N? estrellas stars</span>
-						<cite><p>Texto de la review</p><cite>
+						<p><strong>{{rc.review.author}} in fecha</strong></p>
+						<span>{{rc.review.stars}} stars</span>
+						<cite><p>{{rc.review.body}}</p><cite>
 						</blockquote>
 						<fieldset class="form-group">
-							<select class="form-control">
+							<select ng-model="rc.review.stars"
+									class="form-control"
+									ng-options="stars for stars in [5,4,3,2,1]">
 								<option value="">Rate the Product</option>
+
 							</select>
 						</fieldset>
 						<fieldset class="form-group">
-							<textarea class="form-control" placeholder="write an opinion"></textarea>
+							<textarea 
+								ng-model="rc.review.body"
+								class="form-control" placeholder="write an opinion"></textarea>
 						</fieldset>
 						<fieldset class="form-group">
-							<input class="form-control" type="email" placeholder="write a valid email"></input>
+							<input
+								ng-model="rc.review.author"
+								class="form-control" type="email" placeholder="write a valid email"></input>
 						</fieldset>
 						<fieldset class="form-group">
 							<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
