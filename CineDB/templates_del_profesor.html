@@ -1,0 +1,138 @@
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template y estilos para el componente Encabezado -->
+<!-- ------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="col-lg-2" id="logo"><img width="100" src="assets/img/logo.jpg"></div>
+    <div class="col-lg-10" id="titulo">
+        <h1>CineDB</h1>
+    </div>
+</div>
+
+#logo,#titulo {
+    background-color: rgb(240, 240, 240);
+}
+#titulo>h1 {
+    font-size: 72px;
+}
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template y estilos para el componente Pie -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div class="row" id="pie">
+    <div class="col-lg-6">
+        <h3>Autor: {{autor}}</h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional
+        </a>
+    </div>
+    <div class="col-lg-6">
+        <h3>Datos de The Open Movie Database</h3>
+        <a href="www.omdb.com">Visitar OMDb</a>
+    </div>
+</div>
+
+#pie {
+    background-color: rgb(218, 255, 235);
+}
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template para el componente Inicio -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<h3>Estás en CineDB</h3>
+<p>Te doy la bienvenida a CineDB, 
+    una aplicación que te da acceso a información sobre una miles de películas.</p>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template para el componente Agradecimientos -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<h3>Agradecimientos</h3>
+<div class="row">
+    <div class="col-lg-4">
+        <img width="100%" src="assets/img/omdb.png">
+        <p>A la API <a href="http://omdbapi.com" target="_blank">OMDb.com</a> por darme acceso gratuito a sus datos para el desarrollo de esta aplicación</p>
+    </div>
+    <div width="100%" class="col-lg-4">
+        <img src="assets/img/openwebinars.png">
+        <p>A <a href="http://openwebinars.net" target="_blank">OpenWebinars.net</a> por darme acceso gratuito a sus videocursos de formación, con los que estoy aprendiendo Angular</p>
+    </div>
+    <div width="100%" class="col-lg-4">
+        <img src="assets/img/iesjoseplanes.png">
+        <p>A mis alumnos y alumnas de 2º DAW del <a href="http://iesjoseplanes.es" target="_blank">IES José Planes</a> por aguantar mis tostones de clases</p>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template para el componente Favorito -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div class="card text-center bg-light mb-2 mr-2">
+    <a>
+        <img src="caratula_de_la_pelicula" class="card-img-top">
+    </a>
+    <div class="card-body">
+        <p class="card-text">Título (año)</p>
+        <button type="button" class="btn btn-primary">Detalles</button>
+        <button type="button" class="btn btn-danger">Borrar</button>
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Template para el componente Detalles -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-7">
+        <dl>
+            <dt>Título</dt>
+            <dd>titulo_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Año</dt>
+            <dd>año_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Duración</dt>
+            <dd>titulo_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Géneros</dt>
+            <dd>generos_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Dirección</dt>
+            <dd>director_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Reparto</dt>
+            <dd>actores_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Sinopsis</dt>
+            <dd>argumento_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>País</dt>
+            <dd>pais_de_la_pelicula</dd>
+        </dl>
+        <dl>
+            <dt>Enlace a IMDB</dt>
+            <dd><a href="enlace_a_la_peli_en_IMDB" target="_blank">titulo_de_la_pelicula en IMDB</a></dd>
+        </dl>
+        <dl>
+            <dt>Puntuación de IMDB</dt>
+            <dd>nota_de_la_pelicula</dd>
+        </dl>
+        
+        <p>
+            <button type="button" class="btn btn-primary">Volver a Favoritos</button>
+        </p>
+    </div>
+    <div class="col-5">
+        <img src="caratula_de_la_pelicula" class="card-img-top">
+    </div>
+</div>

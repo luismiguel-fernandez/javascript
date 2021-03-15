@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="css/cinedb.css" rel="stylesheet">
+
+    <script defer src="js/cinedb.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-2" id="logo"><img width="100" src="img/logo.jpg"></div>
+            <div class="col-lg-10" id="titulo">
+                <h1>CineDB</h1>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Favoritos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Buscador</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Agradecimientos</a>
+                  </li>                
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="row" id="inicio">
+            <h3>Estás en CineDB</h3>
+            <p>Te doy la bienvenida a CineDB, 
+                una aplicación que te da acceso a información sobre una miles de películas.</p>
+          </div>
+
+          <div class="row" id="favoritos">
+            <h3>Favoritos</h3>
+          </div>
+
+          <div class="row" id="buscador">
+              <h3>Buscador</h3>
+              <input type="text" id="patron" placeholder="título de película">
+          </div>
+
+          <div class="row" id="agradecimientos">
+            <h3>Agradecimientos</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img width="100%" src="img/omdb.png">
+                    <p>A la API <a href="http://omdbapi.com" target="_blank">OMDb.com</a> por darme acceso gratuito a sus datos para el desarrollo de esta aplicación</p>
+                </div>
+                <div width="100%" class="col-lg-4">
+                    <img src="img/openwebinars.png">
+                    <p>A <a href="http://openwebinars.net" target="_blank">OpenWebinars.net</a> por darme acceso gratuito a sus videocursos de formación, con los que estoy aprendiendo Angular</p>
+                </div>
+                <div width="100%" class="col-lg-4">
+                    <img src="img/iesjoseplanes.png">
+                    <p>A mis alumnos y alumnas de 2º DAW del <a href="http://iesjoseplanes.es" target="_blank">IES José Planes</a> por aguantar mis tostones de clases</p>
+                </div>
+            </div>
+          </div>
+
+
+        <div class="row" id="pie">
+            <div class="col-lg-6">
+                <h3>Autor: {{autor}}</h3>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                    <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                        licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <h3>Datos de The Open Movie Database</h3>
+                <a href="www.omdb.com">Visitar OMDb</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
