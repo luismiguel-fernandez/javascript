@@ -13,38 +13,42 @@
 <body>
     <div class="container">
 
+        <!-- ENCABEZADO -->
         <div class="row">
-            <div class="col-lg-2" id="logo"><img width="100" src="img/logo.jpg"></div>
-            <div class="col-lg-10" id="titulo">
-                <h1>CineDB</h1>
-            </div>
+          <div class="col-lg-2" id="logo"><img width="100" src="img/logo.jpg"></div>
+          <div class="col-lg-10" id="titulo">
+              <h1>CineDB</h1>
+          </div>
         </div>
 
+        <!-- MENÚ DE NAVEGACIÓN -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Favoritos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Buscador</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Agradecimientos</a>
-                  </li>                
-                </ul>
-              </div>
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Favoritos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Buscador</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Agradecimientos</a>
+                </li>                
+              </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
 
+        <!-- SECCIONES DE LA WEB -->
+        <div id="secciones">
           <div class="row" id="inicio">
             <h3>Estás en CineDB</h3>
             <p>Te doy la bienvenida a CineDB, 
-                una aplicación que te da acceso a información sobre una miles de películas.</p>
+                una aplicación que te da acceso a información sobre miles de películas.</p>
           </div>
 
           <div class="row" id="favoritos">
@@ -73,8 +77,11 @@
                 </div>
             </div>
           </div>
+        </div>
 
-
+        <p></p>
+        
+        <!-- PIE DE PÁGINA -->
         <div class="row" id="pie">
             <div class="col-lg-6">
                 <h3>Autor: {{autor}}</h3>
