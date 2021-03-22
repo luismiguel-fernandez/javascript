@@ -1,11 +1,12 @@
-#logo,#titulo {
-    background-color: rgb(240, 240, 240);
+#logo,
+#titulo {
+  background-color: rgb(240, 240, 240);
 }
 
-#titulo>h1 {
-    font-size: 72px;
+#titulo > h1 {
+  font-size: 72px;
 }
 
 #pie {
-    background-color: rgb(218, 255, 235);
+  background-color: rgb(218, 255, 235);
 }
