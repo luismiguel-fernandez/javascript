@@ -76,7 +76,7 @@ function patronTeclaPulsada(ev) {
     }
 
 }
-
+ 
 /*OPCION 2
 window.onload = function() {
     let patron = document.querySelector("#patron")
